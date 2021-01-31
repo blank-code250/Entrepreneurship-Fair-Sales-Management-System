@@ -38,12 +38,15 @@ public class addProduct {
     }
 
     @FXML
-    void renderHome(ActionEvent event) throws IOException {
+    void renderHome(ActionEvent event) {
+        this.renderHome();
+    }
+    
+    private void renderHome() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/home.fxml"));
         this.root.getChildren().clear();
         loader.setRoot(this.root);
         loader.load();
     }
-
 }
 
