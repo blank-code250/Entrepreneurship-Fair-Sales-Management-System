@@ -1,8 +1,11 @@
 package br.com.efsms.view;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -32,8 +35,11 @@ public class addProduct {
     }
 
     @FXML
-    void renderHome(ActionEvent event) {
-
+    void renderHome(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/home.fxml"));
+        this.root.getChildren().clear();
+        loader.setRoot(this.root);
+        loader.load();
     }
 
 }
