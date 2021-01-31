@@ -35,7 +35,7 @@ public class Home {
 
     @FXML
     void renderAddProduct(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/addProduct.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/addProduct.fxml"));
         loader.setRoot(this.root);
         loader.load();
     }
