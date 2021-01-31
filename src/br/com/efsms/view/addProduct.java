@@ -31,7 +31,10 @@ public class addProduct {
 
     @FXML
     void addProduct(ActionEvent event) {
-
+        AddProductController controller = new AddProductController();
+        if(controller.addProduct(name.getText(), price.getText()) == true) {
+           this.renderHome();
+        }
     }
 
     @FXML
